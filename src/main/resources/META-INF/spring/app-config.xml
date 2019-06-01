@@ -34,7 +34,7 @@
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
 		<property name="url" value="jdbc:sqlserver://localhost;databaseName=belajarhibernatedb" />
 		<property name="username" value="sa" />
-		<property name="password" value="Diginovasi" />
+		<property name="password" value="123456" />
 	</bean>
 	
 	<!-- JPA Entity Manager Factory definition -->
