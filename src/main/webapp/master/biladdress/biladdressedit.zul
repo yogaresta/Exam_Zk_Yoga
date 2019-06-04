@@ -1,0 +1,44 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Bil Address Edit" border="normal" 
+			apply="org.zkoss.bind.BindComposer" 
+			viewModel="@id('vm') @init('vmd.BilAddressEditVmd')">
+	
+		<hlayout>
+			<button label="back" onClick="@command('back')" />
+			<button label="save" onClick="@command('save')" />
+		</hlayout>
+		
+		<space />
+		
+		<grid>
+			<columns>
+				<column label="" width="250px" />
+				<column label="" width="300px" />
+			</columns>
+			
+			<rows>
+				<row>
+					<label value="Id Bil Address" />
+					<textbox constraint="no empty : harus diisi" 
+						value="@load(vm.mstBilAddressDto.id) @save(vm.mstBilAddressDto.id, before='save')" 
+						readonly="@load(vm.mstBilAddressDto.id eq null ? false : true)" />
+				</row>
+				
+				<row>
+					<label value="Bil Address Name" />
+					<textbox constraint="no empty : harus diisi" value="@bind(vm.mstBilAddressDto.addressName)" />
+				</row>
+				
+				<row>
+					<label value="Jenis Kelamin" />
+					<radiogroup id="rg2"  selectedItem="@bind(vm.genderChoice)" >
+							<radio radiogroup="rg2" value="M" label="Male" />
+							<radio radiogroup="rg2" value="F" label="Female" />
+					</radiogroup>
+				</row>
+			</rows>
+		</grid>
+	
+</window>
+</zk>

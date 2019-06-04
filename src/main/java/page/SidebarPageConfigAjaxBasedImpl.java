@@ -15,11 +15,14 @@ public class SidebarPageConfigAjaxBasedImpl implements SidebarPageConfig{
 		
 		pageMap.put("fn2", 
 				new SidebarPage("Customer", "/assets/imgs/fn.png", "/master/customer/customer.zul"));
-
+		
 		pageMap.put("fn3", 
+				new SidebarPage("Bill Address", "/assets/imgs/fn.png", "/master/biladdress/biladdress.zul"));
+
+		pageMap.put("fn4", 
 				new SidebarPage("Transaksi","/assets/imgs/fn.png", "/transaksi/order.zul" ));
 		
-		pageMap.put("fn4", 
+		pageMap.put("fn5", 
 				new SidebarPage("Logout","/assets/imgs/fn.png", "/masuk.zul" ));
 	}
 	
